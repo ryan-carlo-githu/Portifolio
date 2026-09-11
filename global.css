@@ -1,0 +1,53 @@
+/* DEFINIÇÕES DE ESTILO GLOBAL */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* RENDERIZAÇÃO E APARÊNCIA DAS FONTES */
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* IMAGENS E ELEMENTOS MULTIMÍDIA */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* CONTROLES DE FORMULÁRIO */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* QUEBRA DE LINHA PARA TEXTOS E TÍTULOS */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* BOTÕES */
+button {
+    cursor: pointer;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ELEMENTOS DESABILITADOS */
+[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
