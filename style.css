@@ -1,4 +1,70 @@
+/* CORES */
+:root {
+    --primary-color: #8B9A6E;
+    --secundary-color: #F7F2EB;
+    --terciary-color: #EAE2D6;
+}
+
+
+/* DEFININDO LAYOUTS */
 body{
-    background-color: none;
-    height: 1920px;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-template-columns: 200px 1fr;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+.o-header { grid-area: header; }
+.o-aside { grid-area: aside; }
+.o-main { grid-area: main; }
+.o-footer { grid-area: footer; }
+
+/* SEM COMENTARIO */
+header {
+    background-color: var(--primary-color);
+    padding-inline: 3em;
+    height: 72px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.5em;
+    height: 100%;
+}
+
+.navegacao__logo {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navegacao__logo img {
+    max-height: 70%; /* Usa 70% da altura do header (deixa um respiro) */
+    width: auto;     /* Ajusta a largura automaticamente mantendo a proporção */
+    object-fit: contain; /* Garante que a imagem nunca seja cortada ou distorcida */
+}
+
+.navegacao__lista {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+main {
+    background-color: var(--secundary-color);
+}
+
+aside {
+    background-color: var(--terciary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
 }

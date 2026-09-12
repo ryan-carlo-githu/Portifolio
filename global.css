@@ -54,19 +54,24 @@ a {
 
 /* BARRA DE ROLAGEM */
 * {
-    scrollbar-width: none;
+    scrollbar-width: thin;
 }
 
 *::-webkit-scrollbar {
     width: 12px;
 }
 
+*::-webkit-scrollbar-thumb {
+    background-color: #8B9A6E;
+    border-radius: 20px;
+}
+
 /* MEDIA (RESPOSAVIDADE) */
 html {
-    @media (max-width: 1080px) {
+    @media screen and (max-width: 1080px) {
         font-size: 93.75%;
     }
-    @media (max-width: 720px) {
+    @media screen and (max-width: 720px) {
         font-size: 87.5%;
     }
 }
