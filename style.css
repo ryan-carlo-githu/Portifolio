@@ -1,8 +1,19 @@
+
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --main-font: "Roboto", sans-serif;
+    --base-size-roboto: 16px;
+    --base-weight-roboto: 400;
+} 
+
+
 /* CORES */
 :root {
     --primary-color: #8B9A6E;
     --secundary-color: #F7F2EB;
     --terciary-color: #EAE2D6;
+    --destaque-color: #F7F4ED;
 }
 
 
@@ -16,6 +27,9 @@ body{
     grid-template-columns: 200px 1fr;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
+    font-family: var(--main-font);
+    font-size: var(--base-size-roboto);
+    font-weight: var(--base-weight-roboto);
 }
 
 .o-header { grid-area: header; }
@@ -38,6 +52,10 @@ nav {
     height: 100%;
 }
 
+.navegacao {
+    margin: 0 10% 0 0;
+}
+
 .navegacao__logo {
     border-radius: 20px;
     display: flex;
@@ -46,15 +64,18 @@ nav {
 }
 
 .navegacao__logo img {
-    max-height: 70%; /* Usa 70% da altura do header (deixa um respiro) */
+    max-height: 100%; /* Usa 70% da altura do header (deixa um respiro) */
     width: auto;     /* Ajusta a largura automaticamente mantendo a proporção */
     object-fit: contain; /* Garante que a imagem nunca seja cortada ou distorcida */
 }
 
 .navegacao__lista {
     display: flex;
-    gap: 1.5rem;
-    align-items: center;
+    gap: 64px;
+    list-style-type: none;
+    font-size: 1.2rem;
+    color: var(--destaque-color);
+    font-weight: 600;
 }
 
 main {
